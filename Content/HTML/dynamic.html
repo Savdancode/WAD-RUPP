@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+</head>
+<body>
+    <span id= "t"></span>
+    <script>
+         /*
+         Document ជាobject មួយដំណាងឲ្យ HTML document ពោលគឺ web page ហ្មឹងអែង។
+         document.getElementByid("t"); រើសយកធាតុដែលមាន id = "t"
+         document.getElementByclassName("Link"); រើសយកធាតុថិតក្នុងថ្នាក់ link.
+         document.getElementbyTagName("a"); រើសយកធាតុ a​ ទាំអស់
+         */
+        function currentTime(){
+             let now = new Date(); /* set current time to variable now*/
+             let time = now.toLocaleTimeString(); /*set local time to variable time*/
+             let t = document.getElementById("t");/*choose element that have id = t and to it to t variable*/
+             t.innerHTML = time; /*set local time to the meaning of element*/
+        }
+        /*
+        window.setInterval(method, time in second);
+        setInterval មានមុខងារហៅអនុគមន៍ឲ្យដើរ ពេលដល់វេលាកំណត់ 
+        អនុគមន៍នឹងដើរសារចុះឡើងអត់កំណត់។
+        */
+        currentTime();/*call currentTime method to work*/
+        window.setInterval(currentTime,1000);/*រាល់វិនាទីហៅអនុគមន៍ curentTime ដើរ*/
+    </script>                          
+</body>
+</html>                                            
